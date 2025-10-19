@@ -17,13 +17,9 @@
     <div class="container header-inner">
       <div class="brand">MindTrack</div>
       <nav class="nav" id="mainNav">
-        <a href="#" class="nav-link">Sign In</a>
-        <button class="btn btn-ghost nav-signup" id="signupBtn">Sign Up</button>
+        <a href="#" class="nav-link" id="signInLink">Sign In</a>
+        <a href="signup.html" class="btn btn-ghost nav-signup">Sign Up</a>
       </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
@@ -106,6 +102,36 @@
       <div class="footer-links">Privacy • Terms</div>
     </div>
   </footer>
+
+  <!-- Sign In Modal -->
+  <div class="modal-backdrop" id="signinModal" aria-hidden="true">
+    <div class="modal dialog">
+      <button class="modal-close" id="signinClose" aria-label="Close">✕</button>
+
+      <h3 class="modal-title" style="color:var(--accent);">Welcome Back</h3>
+      <p class="modal-sub">Sign in to continue your progress.</p>
+
+      <form id="signinForm" class="modal-form" novalidate>
+        <label class="form-label">Email Address
+          <input type="email" id="signinEmail" class="input" required placeholder="you@company.com">
+        </label>
+
+        <label class="form-label">Password
+          <input type="password" id="signinPassword" class="input" required placeholder="Enter password">
+        </label>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+          <a href="#" class="muted-link">Forgot Password?</a>
+        </div>
+
+        <div style="margin-top:16px;">
+          <button class="btn btn-primary full" id="signinSubmit">Log In Securely</button>
+        </div>
+
+        <p class="modal-foot">Need an account? <a href="signup.html">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

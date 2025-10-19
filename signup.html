@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MindTrack — Sign Up</title>
+    <link rel="icon" href="logo.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="signup-page">
+  <div class="signup-split">
+    <!-- Left: Wellness visual -->
+    <div class="signup-left">
+      <div class="signup-left-inner">
+        <h2>Welcome to MindTrack</h2>
+        <p class="muted">A gentle place to start your wellness journey. Create an account to begin tracking and improving team wellbeing.</p>
+
+        <!-- abstract wellness illustration -->
+        <svg class="wellness-svg" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#E6F7F0"/>
+              <stop offset="1" stop-color="#F9F3EC"/>
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" rx="22" fill="url(#g1)"/>
+          <!-- soft shapes -->
+          <circle cx="120" cy="120" r="72" fill="#DFF3E9" />
+          <ellipse cx="380" cy="70" rx="100" ry="50" fill="#FBEFE6" />
+          <path d="M60 320 q120 -180 260 -100 t220 -40" stroke="#D2EAD8" stroke-width="18" fill="none" stroke-linecap="round" />
+        </svg>
+
+        <div class="left-footer muted">Already have an account? <a href="index.html" class="muted-link">Sign In</a></div>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="signup-right">
+      <div class="signup-card">
+        <h3>Create Your Account</h3>
+        <p class="muted">Fill the details to start tracking — we keep your data safe.</p>
+
+        <form id="signupForm" novalidate>
+          <label class="form-label">Full Name
+            <input type="text" id="fullName" class="input" placeholder="Your full name" required>
+          </label>
+
+          <label class="form-label">Email Address
+            <input type="email" id="email" class="input" placeholder="you@company.com" required>
+          </label>
+
+          <label class="form-label">Password
+            <input type="password" id="password" class="input" placeholder="Create password" minlength="6" required>
+          </label>
+
+          <label class="form-label">Confirm Password
+            <input type="password" id="confirmPassword" class="input" placeholder="Confirm password" minlength="6" required>
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="agree" /> I agree to the <a href="#" class="muted-link">Privacy Policy</a>
+          </label>
+
+          <div style="margin-top:14px;">
+            <button id="startTracking" class="btn btn-primary full" >Start Tracking</button>
+          </div>
+
+          <p class="muted small" style="margin-top:10px;">By creating an account you agree to our Terms of Service.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
